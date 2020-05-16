@@ -1,0 +1,15 @@
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin general() {
+    width: $width__general;
+}
+
+@mixin font($size: 16, $weight: normal) {
+    font-size: rem($size);
+    font-weight: $weight;
+}

@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header title="Neal.fun" />
+    <Content />
+    <div>
+      <Adsense />
+      <Footer />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/templates/Header";
+import Content from "./components/templates/Content";
+import Adsense from "./components/templates/Adsense";
+import Footer from "./components/templates/Footer";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Header,
+    Content,
+    Adsense,
+    Footer
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang='scss'>
+body,
+html {
+  font-family: $font-family__general;
+  background-color: $body__bg-color;
+  padding: 0;
+  margin: 0;
+  touch-action: manipulation;
 }
 </style>
